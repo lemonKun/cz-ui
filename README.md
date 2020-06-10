@@ -15,9 +15,9 @@ yarn serve
 yarn build
 ```
 
-### Run your unit tests
+### 单元测试
 ```
-yarn test:unit
+npm install --save-dev @vue/test-utils karma karma-chrome-launcher karma-mocha karma-sourcemap-loader karma-spec-reporter karma-webpack mocha karma-chai
 ```
 
 ### Customize configuration
