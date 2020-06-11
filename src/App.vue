@@ -16,8 +16,10 @@
         <br><br>
         <!-- 按钮组 组件 -->
         <cz-button-group>
-            <cz-button type="primary" icon="houtuishangyige">上一页</cz-button>
-            <cz-button type="primary" icon="qianjinxiayige" icon-position="right">下一页</cz-button>
+            <cz-button type="danger" icon="houtuishangyige">上一页</cz-button>
+            <cz-button type="danger" icon="qianjinxiayige" icon-position="right">下一页</cz-button>
+            <cz-button type="danger" icon="qianjinxiayige" icon-position="right">下一页</cz-button>
+            <cz-button type="danger" icon="qianjinxiayige" icon-position="right">下一页</cz-button>
         </cz-button-group>
         <br><br>
         <!-- icon组件 -->
