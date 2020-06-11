@@ -1,9 +1,9 @@
 <template>
-    <button class="cz-button" :class="btnClass" :disabled="loading" @click="$emit('click', $event)">
+    <button class="lk-button" :class="btnClass" :disabled="loading" @click="$emit('click', $event)">
         <!-- 非loading的icon -->
-        <cz-icon v-if="icon && !loading" :icon="icon" class="icon"></cz-icon>
+        <lk-icon v-if="icon && !loading" :icon="icon" class="icon"></lk-icon>
         <!-- loading的icon -->
-        <cz-icon v-if="loading" icon="dengdai-" class="icon"></cz-icon>
+        <lk-icon v-if="loading" icon="dengdai-" class="icon"></lk-icon>
         <!-- 文本内容 -->
         <span v-if="this.$slots.default">
             <slot></slot>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-    name: 'cz-button',
+    name: 'lk-button',
     props: {
         type: {
             type: String,
@@ -47,10 +47,10 @@ export default {
         btnClass() {
             let classes = [];
             if(this.type) {
-                classes.push(`cz-button-${this.type}`);
+                classes.push(`lk-button-${this.type}`);
             }
             if(this.iconPosition) {
-                classes.push(`cz-button-${this.iconPosition}`);
+                classes.push(`lk-button-${this.iconPosition}`);
             }
             return classes;
         }
@@ -66,7 +66,7 @@ export default {
     $border-color: #dcdfe6;
     $background: #ecf5ff;
     $active-color: #3a8ee6;
-    .cz-button {
+    .lk-button {
         border-radius: $border-radius;
         border: 1px solid $border-color;
         height: $height;

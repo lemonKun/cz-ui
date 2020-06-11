@@ -1,5 +1,5 @@
 <template>
-    <svg class="cz-icon" aria-hidden="true">
+    <svg class="lk-icon" aria-hidden="true">
         <use :xlink:href="`#icon-${icon}`"></use>
     </svg>
 </template>
@@ -8,7 +8,7 @@
 import '../styles/icon';
 
 export default {
-    name: 'cz-icon',
+    name: 'lk-icon',
     props: {
         icon: {
             type: String,
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="css">
-.cz-icon {
+.lk-icon {
     width: 25px; height: 25px;
     vertical-align: middle;
     fill: currentColor;

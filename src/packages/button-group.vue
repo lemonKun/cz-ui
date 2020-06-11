@@ -1,17 +1,17 @@
 <template>
-    <div class="cz-button-group">
+    <div class="lk-button-group">
         <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'cz-button-group',
+    name: 'lk-button-group',
     mounted() {
         //里边只能存放button组件校验内部子节点是不是button，否则会报错
         let children = this.$el.children;
         for(let i = 0; i < children.length; i++) {
-            console.assert(children[i].tagName === 'BUTTON', '子元素必须为cz-button')
+            console.assert(children[i].tagName === 'BUTTON', '子元素必须为lk-button')
         }
     }
 }
@@ -19,7 +19,7 @@ export default {
 <style lang="scss">
 @import '../styles/_var.scss';
 
-.cz-button-group {
+.lk-button-group {
     display: inline-flex;
     vertical-align: middle;
     button {

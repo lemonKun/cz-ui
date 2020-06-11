@@ -9,15 +9,15 @@ describe('button.vue', () => {
     it('1.测试button能否正常传入slot', () => {
         const wrapper = shallowMount(Button, {
             slots: {
-                default: 'test-cz-ui-span-name'
+                default: 'test-lk-ui-span-name'
             }
         })
-        expect(wrapper.text()).to.eq('test-cz-ui-span-name');
+        expect(wrapper.text()).to.eq('test-lk-ui-span-name');
     })
     it('2.测试icon传入是否能正常显示', () => {
         const wrapper = shallowMount(Button, {
             stubs: {
-                'cz-icon': Icon
+                'lk-icon': Icon
             },
             propsData: {
                 icon: 'sousuo'
@@ -28,7 +28,7 @@ describe('button.vue', () => {
     it('3.测试loading时，icon按钮是禁用状态', () => {
         const wrapper = shallowMount(Button, {
             stubs: {
-                'cz-icon': Icon
+                'lk-icon': Icon
             },
             propsData: {
                 loading: true
@@ -39,7 +39,7 @@ describe('button.vue', () => {
     })
     it('4.测试按钮能否正常点击', () => {
         const wrapper = shallowMount(Button, {
-            stubs: ['cz-icon'] //不去渲染icon 如果打印wrapper.vm.$el则可以看到生成虚拟的cz-icon-stub标签
+            stubs: ['lk-icon'] //不去渲染icon 如果打印wrapper.vm.$el则可以看到生成虚拟的lk-icon-stub标签
         })
         wrapper.find('button').trigger('click');
         expect(wrapper.emitted('click').length).to.eq(1);
@@ -48,7 +48,7 @@ describe('button.vue', () => {
         const wrapper = shallowMount(Button, {
             attachTo: document.body,
             stubs: {
-                'cz-icon': Icon
+                'lk-icon': Icon
             },
             slots: {
                 default: 'have-icon-position-attribute-span-name'
