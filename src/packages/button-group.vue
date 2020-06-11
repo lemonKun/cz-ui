@@ -25,9 +25,12 @@ export default {
     button {
         border-radius: 0;
         // 从第二个button开始向左合并1px的边框距离
+        border: none;
+        &:hover, &:active, &:focus {
+            border: none;
+        }
         &:not(:first-child) {
-            margin-left: -1px;
-            border-left: 1px solid #fff;
+            margin-left: 1px;
         }
         &:first-child {
             border-top-left-radius: $border-radius;

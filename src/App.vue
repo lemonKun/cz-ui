@@ -16,10 +16,10 @@
         <br><br>
         <!-- 按钮组 组件 -->
         <lk-button-group>
-            <lk-button type="danger" icon="houtuishangyige">上一页</lk-button>
-            <lk-button type="danger" icon="qianjinxiayige" icon-position="right">下一页</lk-button>
-            <lk-button type="danger" icon="qianjinxiayige" icon-position="right">下一页</lk-button>
-            <lk-button type="danger" icon="qianjinxiayige" icon-position="right">下一页</lk-button>
+            <lk-button icon="houtuishangyige">上一页</lk-button>
+            <lk-button icon="qianjinxiayige" icon-position="right">下一页</lk-button>
+            <lk-button icon="qianjinxiayige" icon-position="right">下一页</lk-button>
+            <lk-button icon="qianjinxiayige" icon-position="right">下一页</lk-button>
         </lk-button-group>
         <br><br>
         <!-- icon组件 -->
