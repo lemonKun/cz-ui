@@ -1,6 +1,7 @@
 <template>
     <div id="app">
         <!-- 默认按钮  -->
+        <h3>按钮组件</h3>
         <lk-button>默认按钮</lk-button>
         <!-- 带类型的按钮 -->
         <lk-button type="primary">主要按钮</lk-button>
@@ -15,18 +16,53 @@
         <lk-button type="danger" loading>加载中</lk-button>
         <br><br>
         <!-- 按钮组 组件 -->
+        <h3>按钮组</h3>
         <lk-button-group>
             <lk-button icon="houtuishangyige">上一页</lk-button>
-            <lk-button icon="qianjinxiayige" icon-position="right">下一页</lk-button>
-            <lk-button icon="qianjinxiayige" icon-position="right">下一页</lk-button>
+            <lk-button type="primary" icon="houtuishangyige">上一页</lk-button>
+            <lk-button type="primary" icon="qianjinxiayige" icon-position="right">下一页</lk-button>
             <lk-button icon="qianjinxiayige" icon-position="right">下一页</lk-button>
         </lk-button-group>
-        <br><br>
+        <br><br>    
         <!-- icon组件 -->
+        <h3>icon组件</h3>
         <lk-icon icon="houtuishangyige"></lk-icon>
         <lk-icon icon="qianjinxiayige"></lk-icon>
         <lk-icon icon="sousuo"></lk-icon>
         <lk-icon icon="dengdai-"></lk-icon>
+        <br><br>
+        <!-- 布局组件 -->
+        <h3>布局组件</h3>
+        <!-- span和offset属性 -->
+        <lk-row>
+            <lk-col :span="4"><div class="grid-content bg-purple"></div></lk-col>
+            <lk-col :span="6" :offset="1"><div class="grid-content bg-purple-light"></div></lk-col>
+            <lk-col :span="6" :offset="3"><div class="grid-content bg-purple"></div></lk-col>
+        </lk-row>
+        <br><br>
+        <!-- gutter实现col之间的缝隙 -->
+        <lk-row :gutter="20">
+            <lk-col :span="6"><div class="grid-content bg-purple"></div></lk-col>
+            <lk-col :span="6"><div class="grid-content bg-purple-light"></div></lk-col>
+            <lk-col :span="6"><div class="grid-content bg-purple"></div></lk-col>
+            <lk-col :span="6"><div class="grid-content bg-purple-light"></div></lk-col>
+        </lk-row>
+        <br><br>
+        <!-- flex布局 -->
+        <lk-row justify="end">
+            <lk-col :span="6"><div class="grid-content bg-purple"></div></lk-col>
+            <lk-col :span="6"><div class="grid-content bg-purple-light"></div></lk-col>
+            <lk-col :span="6"><div class="grid-content bg-purple"></div></lk-col>
+        </lk-row>
+        <br><br>
+        <!-- 响应式变化 -->
+        <lk-row :gutter="10">
+            <lk-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple"></div></lk-col>
+            <lk-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple-light"></div></lk-col>
+            <lk-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple"></div></lk-col>
+            <lk-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple-light"></div></lk-col>
+        </lk-row>
+        
     </div>
 </template>
 
@@ -40,5 +76,21 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
+.lk-col {
+    border-radius: 4px;
+}
+.bg-purple-dark {
+    background: #99a9bf;
+}
+.bg-purple {
+    background: #d3dce6;
+}
+.bg-purple-light {
+    background: #e5e9f2;
+}
+.grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+}
 </style>

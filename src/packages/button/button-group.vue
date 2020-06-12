@@ -17,7 +17,7 @@ export default {
 }
 </script>
 <style lang="scss">
-@import '../styles/_var.scss';
+@import '@/styles/_var.scss';
 
 .lk-button-group {
     display: inline-flex;

@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style lang="scss">
-    @import '../styles/_var.scss';
+    @import '@/styles/_var.scss';
     $height: 42px;
     $font-size: 16px;
     $color: #606266;
@@ -80,7 +80,7 @@ export default {
         user-select: none;
         outline: none;
         &:hover, &:focus {
-            border-color: $border-color;
+            border-color: $active-color;
             background-color: $background;
         }
         &:active {
