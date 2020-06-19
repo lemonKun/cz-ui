@@ -1,8 +1,8 @@
 import {shallowMount} from '@vue/test-utils';
 import {expect} from 'chai';
 
-import Button from '@/packages/button.vue';
-import Icon from '@/packages/icon.vue';
+import Button from '@/packages/button/button.vue';
+import Icon from '@/packages/icon/icon.vue';
 
 describe('button.vue', () => {
     // TDD测试方式

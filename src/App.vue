@@ -41,7 +41,7 @@
         </lk-row>
         <br><br>
         <!-- gutter实现col之间的缝隙 -->
-        <lk-row :gutter="20">
+        <lk-row :gutter="100">
             <lk-col :span="6"><div class="grid-content bg-purple"></div></lk-col>
             <lk-col :span="6"><div class="grid-content bg-purple-light"></div></lk-col>
             <lk-col :span="6"><div class="grid-content bg-purple"></div></lk-col>
@@ -49,7 +49,7 @@
         </lk-row>
         <br><br>
         <!-- flex布局 -->
-        <lk-row justify="end">
+        <lk-row justify="center">
             <lk-col :span="6"><div class="grid-content bg-purple"></div></lk-col>
             <lk-col :span="6"><div class="grid-content bg-purple-light"></div></lk-col>
             <lk-col :span="6"><div class="grid-content bg-purple"></div></lk-col>

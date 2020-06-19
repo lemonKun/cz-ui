@@ -1,6 +1,6 @@
 <template>
     <div class="lk-row-wrap">
-        <div class="lk-row" :class="rowClass" :style="rowStyle">
+        <div class="lk-row" :style="rowStyle">
             <slot></slot>
         </div>
     </div>
@@ -31,13 +31,6 @@ export default {
         })
     },
     computed: {
-        rowClass() {
-            let classes = [];
-            if(this.justify) {
-                classes.push(`lk-row-${this.justify}`);
-            }
-            return classes;
-        },
         rowStyle() {
             let style = {};
             if(this.gutter) {
@@ -45,6 +38,13 @@ export default {
                     ...style,
                     marginLeft: -this.gutter / 2 + 'px',
                     marginRight: -this.gutter / 2 + 'px'
+                }
+            }
+            if(this.justify) {
+                let key = ['start', 'end'].includes(this.justify) ? 'flex-' + this.justify : this.justify;
+                style = {
+                    ...style,
+                    justifyContent: key
                 }
             }
             return style;
@@ -61,11 +61,5 @@ export default {
 .lk-row {
     display: flex;
     flex-wrap: wrap;
-    @each $position, $positionName in (start: flex-start, center: center, end: flex-end,
-        space-around: space-around, space-between: space-between) {
-        &-#{$position} {
-            justify-content: #{$positionName};
-        }
-    }
 }
 </style>
