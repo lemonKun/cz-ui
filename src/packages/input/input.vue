@@ -20,7 +20,7 @@
         <!-- 失去焦点后再获取焦点 -->
         <lk-icon v-if="showPassword && value && !disabled"
             class="icon-hover" 
-            icon="dengdai-"
+            icon="xianshi"
             @click.native="changePasswordStatus"></lk-icon>
     </div>
 </template>
@@ -158,7 +158,7 @@ export default {
         transition: color .2s;
     }
     input {
-        padding-right: 26px;
+        padding-right: 30px;
     }
 }
 .lk-input-prefix-icon {
@@ -172,7 +172,7 @@ export default {
         transition: color .2s;
     }
     input {
-        padding-left: 26px;
+        padding-left: 30px;
     }
 }
 </style>

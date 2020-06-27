@@ -172,11 +172,11 @@
         <lk-input
             v-model="inputValue"
             placeholder="请输入"
-            prefix-icon="sousuo" />
+            prefix-icon="bianji" />
         <lk-input
             v-model="inputValue"
             placeholder="请输入"
-            suffix-icon="sousuo" />
+            suffix-icon="bianji" />
     </div>
 </template>
 
