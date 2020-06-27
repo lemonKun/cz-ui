@@ -152,11 +152,42 @@
                 <lk-footer>Footer</lk-footer>
             </lk-container>
         </lk-container>
+        <br><br>
+        <!-- 输入框 -->
+        <lk-input  
+            v-model="inputValue"
+            :disabled="false"
+            :clearable="true"
+            type="text"
+            placeholder="最多输入200字"
+            name="username" />
+        {{inputValue}}
+        <br>
+        <lk-input
+            v-model="passwordValue"
+            placeholder="请输入密码"
+            show-password
+            type="password" />
+        <br>
+        <lk-input
+            v-model="inputValue"
+            placeholder="请输入"
+            prefix-icon="sousuo" />
+        <lk-input
+            v-model="inputValue"
+            placeholder="请输入"
+            suffix-icon="sousuo" />
     </div>
 </template>
 
 <script>
 export default {
+    data() {
+        return {
+            inputValue: '22222',
+            passwordValue: 'password'
+        }
+    },
     methods: {
         onBtnClick(e) {
             console.log(e);

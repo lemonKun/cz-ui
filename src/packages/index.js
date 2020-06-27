@@ -10,6 +10,8 @@ import Footer from './container/footer.vue';
 import Main from './container/main.vue';
 import Header from './container/header.vue';
 
+import Input from './input/input.vue';
+
 const install = (Vue) => {
     Vue.component(Button.name, Button);
     Vue.component(Icon.name, Icon);
@@ -17,6 +19,8 @@ const install = (Vue) => {
 
     Vue.component(Row.name, Row);
     Vue.component(Col.name, Col);
+
+    Vue.component(Input.name, Input);
 
     Vue.component(Aside.name, Aside);
     Vue.component(Container.name, Container);
