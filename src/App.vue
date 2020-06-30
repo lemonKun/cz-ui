@@ -154,6 +154,7 @@
         </lk-container>
         <br><br>
         <!-- 输入框 -->
+        <h3>输入框组件</h3>
         <lk-input  
             v-model="inputValue"
             :disabled="false"
@@ -177,6 +178,29 @@
             v-model="inputValue"
             placeholder="请输入"
             suffix-icon="bianji" />
+        <br><br>
+        <!-- 上传组件 -->
+        <lk-progress :percentage="60"></lk-progress>
+        <h3>上传组件</h3>
+        <lk-upload
+            name="upload"
+            :file-list="fileList"
+            action="http://localhost:3000/upload"
+            :limit="4"
+            accept="image/jpeg"
+            :multiple="true"
+            :on-exceed="handleExceed"
+            :on-change="handleChange"
+            :on-success="handleSuccess"
+            :on-error="handleError"
+            :on-progress="handleProgress"
+            :before-upload="beforeUpload"
+            :drag="true">
+            <lk-button type="primary" icon="bianji">点击上传</lk-button>
+            <div slot="tip">只能上传jpg/png格式的图片，且不超过500kb</div>
+        </lk-upload>
+        <br>
+        <br>
     </div>
 </template>
 
@@ -185,12 +209,45 @@ export default {
     data() {
         return {
             inputValue: '22222',
-            passwordValue: 'password'
+            passwordValue: 'password',
+            fileList: [{
+                name: '我是第一张图片',
+                url: 'https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2309181523,3376829556&fm=26&gp=0.jpg'
+            }, {
+                name: '我是第二张图片',
+                url: 'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3498227956,2363956367&fm=26&gp=0.jpg'
+            }]
         }
     },
     methods: {
         onBtnClick(e) {
             console.log(e);
+        },
+        handleExceed() {
+            console.log('超过上限数量啦！')
+        },
+        handleChange(file) {
+            // console.log(file)
+        },
+        handleSuccess(res, rawFile) {
+            // console.log(res, rawFile)
+        },
+        handleError(err) {
+            console.log(err)
+        },
+        handleProgress() {
+
+        },
+        beforeUpload(file) {
+            let limitSize = file.size / 1024 > 5000;
+            if(limitSize) {
+                console.log('超过了最大限制');
+                return false;
+            }else if(!file.name.endsWith('.jpg')) {
+                console.log('文件类型错误');
+                return false;
+            }
+            return true;
         }
     }
 };

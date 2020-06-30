@@ -12,6 +12,10 @@ import Header from './container/header.vue';
 
 import Input from './input/input.vue';
 
+import Upload from './upload/upload.vue';
+
+import Progress from './progress/progress.vue';
+
 const install = (Vue) => {
     Vue.component(Button.name, Button);
     Vue.component(Icon.name, Icon);
@@ -27,6 +31,10 @@ const install = (Vue) => {
     Vue.component(Footer.name, Footer);
     Vue.component(Main.name, Main);
     Vue.component(Header.name, Header);
+
+    Vue.component(Upload.name, Upload);
+
+    Vue.component(Progress.name, Progress);
 }
 
 //如果通过script标签引入的话，则自动执行install任务
